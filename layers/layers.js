@@ -82,6 +82,10 @@ var group_SISMICIDAD = new ol.layer.Group({
                                 layers: [lyr_IGEPN_to_2009_1,lyr_IGEPN_20102011_2,lyr_IGEPN_2011_2021_3,],
                                 fold: "open",
                                 title: "SISMICIDAD"});
+var group_SHP = new ol.layer.Group({
+                                layers: [],
+                                fold: "open",
+                                title: "SHP"});
 var group_RASTER = new ol.layer.Group({
                                 layers: [lyr_GoogleSatellite_0,],
                                 fold: "open",
@@ -99,9 +103,9 @@ lyr_IGEPN_2011_2021_3.set('fieldAliases', {'date_': 'date_', 'time_value': 'time
 lyr_IGEPN_to_2009_1.set('fieldImages', {'ID': 'TextEdit', 'Fecha': 'DateTime', 'Latitud': 'TextEdit', 'Longitud': 'TextEdit', 'Profundida': 'TextEdit', 'Mw': 'TextEdit', 'AA': 'Range', 'Mes': 'Range', 'Dia': 'Range', 'Hora': 'Range', 'Minuto': 'Range', 'Segundo': 'TextEdit', 'Catalogo': 'TextEdit', 'Fuente': 'TextEdit', });
 lyr_IGEPN_20102011_2.set('fieldImages', {'Catalogo': 'TextEdit', 'Latitud': 'TextEdit', 'Longitud': 'TextEdit', 'Profundida': 'TextEdit', 'Magnitud': 'TextEdit', 'Tipo': 'TextEdit', 'Fecha': 'DateTime', 'Time': 'TextEdit', });
 lyr_IGEPN_2011_2021_3.set('fieldImages', {'date_': 'DateTime', 'time_value': 'TextEdit', 'latitude_v': 'TextEdit', 'longitude_': 'TextEdit', 'depth_valu': 'TextEdit', 'magnitude_': 'TextEdit', 'quality_us': 'TextEdit', 'quality__1': 'TextEdit', 'quality_st': 'TextEdit', 'quality_az': 'TextEdit', 'quality_ma': 'TextEdit', 'quality_mi': 'TextEdit', 'Date': 'TextEdit', });
-lyr_IGEPN_to_2009_1.set('fieldLabels', {'ID': 'no label', 'Fecha': 'no label', 'Latitud': 'no label', 'Longitud': 'no label', 'Profundida': 'no label', 'Mw': 'no label', 'AA': 'no label', 'Mes': 'no label', 'Dia': 'no label', 'Hora': 'no label', 'Minuto': 'no label', 'Segundo': 'no label', 'Catalogo': 'no label', 'Fuente': 'no label', });
-lyr_IGEPN_20102011_2.set('fieldLabels', {'Catalogo': 'no label', 'Latitud': 'no label', 'Longitud': 'no label', 'Profundida': 'no label', 'Magnitud': 'no label', 'Tipo': 'no label', 'Fecha': 'no label', 'Time': 'no label', });
-lyr_IGEPN_2011_2021_3.set('fieldLabels', {'date_': 'no label', 'time_value': 'no label', 'latitude_v': 'no label', 'longitude_': 'no label', 'depth_valu': 'no label', 'magnitude_': 'no label', 'quality_us': 'no label', 'quality__1': 'no label', 'quality_st': 'no label', 'quality_az': 'no label', 'quality_ma': 'no label', 'quality_mi': 'no label', 'Date': 'no label', });
+lyr_IGEPN_to_2009_1.set('fieldLabels', {'ID': 'inline label - visible with data', 'Fecha': 'inline label - visible with data', 'Latitud': 'inline label - visible with data', 'Longitud': 'inline label - visible with data', 'Profundida': 'inline label - visible with data', 'Mw': 'inline label - visible with data', 'AA': 'inline label - visible with data', 'Mes': 'inline label - visible with data', 'Dia': 'inline label - visible with data', 'Hora': 'inline label - visible with data', 'Minuto': 'inline label - visible with data', 'Segundo': 'inline label - visible with data', 'Catalogo': 'inline label - visible with data', 'Fuente': 'inline label - visible with data', });
+lyr_IGEPN_20102011_2.set('fieldLabels', {'Catalogo': 'inline label - visible with data', 'Latitud': 'inline label - visible with data', 'Longitud': 'inline label - visible with data', 'Profundida': 'inline label - visible with data', 'Magnitud': 'inline label - visible with data', 'Tipo': 'inline label - visible with data', 'Fecha': 'inline label - visible with data', 'Time': 'inline label - visible with data', });
+lyr_IGEPN_2011_2021_3.set('fieldLabels', {'date_': 'inline label - visible with data', 'time_value': 'inline label - visible with data', 'latitude_v': 'inline label - visible with data', 'longitude_': 'inline label - visible with data', 'depth_valu': 'inline label - visible with data', 'magnitude_': 'inline label - visible with data', 'quality_us': 'inline label - visible with data', 'quality__1': 'inline label - visible with data', 'quality_st': 'inline label - visible with data', 'quality_az': 'inline label - visible with data', 'quality_ma': 'inline label - visible with data', 'quality_mi': 'inline label - visible with data', 'Date': 'inline label - visible with data', });
 lyr_IGEPN_2011_2021_3.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
